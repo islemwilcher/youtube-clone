@@ -16,7 +16,7 @@ export default makeStyles((theme) => ({
         color: 'black'
     },
     btns : {
-        padding: '0px',
+        padding: '0px 10px',
         fontSize: '20px',
         color: 'black'
     },
@@ -25,6 +25,16 @@ export default makeStyles((theme) => ({
         fontSize: '25px',
         borderRadius: '50%',
         color: 'black'
+    },
+    ul: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        listStyle: 'none',
+        overflow: 'hidden',
+    },
+    bottom: {
+        margin: '10px 20px',
+        width: '100%',
     },
     
 [theme.breakpoints.down('sm')]: {
