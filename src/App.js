@@ -1,9 +1,10 @@
 
+import Nav from "./components/navbar/nav";
 
 function App() {
   return (
     <div>
-      <h2>youtube clone</h2>
+      <Nav />
     </div>
   );
 }
