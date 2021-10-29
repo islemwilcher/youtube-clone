@@ -35,9 +35,8 @@ export default makeStyles((theme) => ({
     title: {
         backgroundColor: '#969292',
         borderRadius: '30px',
-        padding: '5px 10px',
+        padding: '5px',
         marginLeft: '10px',
-        width: 'auto',
     },
     
 [theme.breakpoints.down('sm')]: {

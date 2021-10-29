@@ -55,7 +55,6 @@ const Nav = () => {
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}
             >
-            
             <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>All</SwiperSlide></Link>
             <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>series</SwiperSlide></Link>
             <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>football</SwiperSlide></Link>
