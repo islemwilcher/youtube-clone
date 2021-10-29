@@ -5,16 +5,17 @@ import { BsSearch, BsFillPersonFill } from 'react-icons/bs'
 import { MdKeyboardVoice, MdSettings } from 'react-icons/md'
 import { SiNintendogamecube } from 'react-icons/si'
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
+
 import useStyles from './styles'
 
 const Nav = () => {
     const classes = useStyles()
     const navStyle = {
-        textDecoration: 'none',
         color: 'black',
-        backgroundColor: '#a39f9e',
-        padding: '10px',
-        borderRadius: '30px',
+        textDecoration: 'none',
     };
     return (
         <>
@@ -46,25 +47,31 @@ const Nav = () => {
                 </div>
             </div>
         </div>
-        <div className={classes.bottom} >
-            <ul className={classes.ul}>
-                <Link style={navStyle} ><li>All</li></Link>
-                <Link style={navStyle} ><li>Live</li></Link>
-                <Link style={navStyle} ><li>Misuc</li></Link>
-                <Link style={navStyle} ><li>History</li></Link>
-                <Link style={navStyle} ><li>Television series</li></Link>
-                <Link style={navStyle} ><li>box</li></Link>
-                <Link style={navStyle} ><li>tech</li></Link>
-                <Link style={navStyle} ><li>BBC</li></Link>
-                <Link style={navStyle} ><li>Laughter</li></Link>
-                <Link style={navStyle} ><li>Cartoon</li></Link>
-                <Link style={navStyle} ><li>Cars</li></Link>
-                <Link style={navStyle} ><li>Football</li></Link>
-                <Link style={navStyle} ><li>Sports</li></Link>
-                <Link style={navStyle} ><li>Media</li></Link>
-                <Link style={navStyle} ><li>USA</li></Link>
-                <Link style={navStyle} ><li>Recently uploaded</li></Link>
-            </ul>
+        <div >
+        <Swiper className={classes.swipe}
+            spaceBetween={0}
+            slidesPerView={15}
+            centeredSlides
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={swiper => console.log(swiper)}
+            >
+            
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>All</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>series</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>football</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>Media</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>News</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>Music</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>world</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>Live</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>Laughter</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>Kids</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>Cartoon</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>Cars</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>Comedy</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>songs</SwiperSlide></Link>
+            <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>USA</SwiperSlide></Link>
+        </Swiper>
         </div>
         </>
     )

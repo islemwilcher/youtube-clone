@@ -4,7 +4,8 @@ export default makeStyles((theme) => ({
     nav : {
         display: 'flex',
         justifyContent: 'space-between',
-        margin: '10px 20px',
+        margin: '10px 10px 10px auto',
+        width: '70%',
     },
     input : {
         width: '400px',
@@ -26,15 +27,17 @@ export default makeStyles((theme) => ({
         borderRadius: '50%',
         color: 'black'
     },
-    ul: {
-        display: 'flex',
-        justifyContent: 'space-around',
-        listStyle: 'none',
-        overflow: 'hidden',
+    swipe: {
+        margin: '10px 10px 10px auto',
+        width: '70%',
+
     },
-    bottom: {
-        margin: '10px 20px',
-        width: '100%',
+    title: {
+        backgroundColor: '#969292',
+        borderRadius: '30px',
+        padding: '5px 10px',
+        marginLeft: '10px',
+        width: 'auto',
     },
     
 [theme.breakpoints.down('sm')]: {
