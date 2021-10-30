@@ -11,14 +11,14 @@ import 'swiper/swiper.min.css'
 
 import useStyles from './styles'
 
-const Nav = () => {
+const Navbar = () => {
     const classes = useStyles()
     const navStyle = {
         color: 'black',
         textDecoration: 'none',
     };
     return (
-        <>
+        <div className={classes.allthenav}>
         <div className={classes.nav}>
             <div className={classes.left}>
                 <div className={classes.top}>
@@ -51,7 +51,6 @@ const Nav = () => {
         <Swiper className={classes.swipe}
             spaceBetween={0}
             slidesPerView={15}
-            centeredSlides
             onSlideChange={() => console.log("slide change")}
             onSwiper={swiper => console.log(swiper)}
             >
@@ -72,8 +71,8 @@ const Nav = () => {
             <Link style={navStyle} to="#"><SwiperSlide className={classes.title}>USA</SwiperSlide></Link>
         </Swiper>
         </div>
-        </>
+        </div>
     )
 }
 
-export default Nav
+export default Navbar
