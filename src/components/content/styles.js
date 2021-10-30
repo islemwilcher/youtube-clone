@@ -21,6 +21,12 @@ export default makeStyles((theme) => ({
     width: '30%',
     position: 'relative',
     },
+    details: {
+        display: 'block',
+        margin: 'auto 0',
+        paddingLeft: '15px',
+        paddingBottom: '5px',
+    },
 
 [theme.breakpoints.down('sm')]: {
 
